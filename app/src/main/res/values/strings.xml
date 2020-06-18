@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">BudgetWala</string>
+
+    <string name="text_app_name">Budget Wala</string>
+    <string name="app__tag">...making life easier</string>
+    <string name="how_much_saving">How much money you should be saving ..??</string>
+    <string name="app_details">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n
+    </string>
+    <string name="ok">Ok</string>
+    <string name="tv_place_ur_id">Place your monthly salary here...</string>
+    <string name="sal">Enter salary ( in Rs )</string>
+    <string name="tv_provideexpense">Please provide some of your expenses...</string>
+    <string name="tv_type">D : Daily, W : Weekly, M : Monthly</string>
+    <string name="submit">Submit</string>
+    <string name="cannot_be_empty">Field cannot be empty</string>
+    <string name="enter_valid">Enter valid input</string>
+    <string name="thank_you">Thank you for your submission</string>
+    <string name="please_find">Please find the Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="how_much_for_saving">How much you would save if you saved in lumpsum percentages</string>
+    <string name="how_much_for_expense">How much you would save if you could save a percentage of each expense</string>
+    <string name="text_comparison">Here are some comparison if you invested these savings for</string>
+    <string name="text_print">Print</string>
+</resources>

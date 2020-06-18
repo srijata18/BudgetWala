@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/cl_root"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:focusedByDefault="false">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:visibility="gone"
+                android:textColor="@android:color/black"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="60dp"
+                android:background="@drawable/rounded_corner_bg"
+                android:padding="@dimen/dimen_12dp"
+                android:id="@+id/tv_emptystate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textSize="@dimen/dimen_20dp"
+                android:textStyle="bold"
+                android:fontFamily="casual"
+                android:text="Kindly provide your salary to calculate your budget"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_header"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textStyle="bold"
+            android:textSize="@dimen/dimen_15dp"
+            android:text="@string/thank_you"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_12dp"
+            android:fontFamily="casual"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:id="@+id/tv_please_find"
+            android:layout_width="@dimen/dimen_0dp"
+            android:gravity="center"
+            android:fontFamily="casual"
+            android:textSize="@dimen/dimen_10dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/please_find"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_header" />
+        <TextView
+            android:id="@+id/tv_salary"
+            android:layout_width="@dimen/dimen_0dp"
+            android:gravity="center"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:textSize="@dimen/dimen_15dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Your savings :"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_please_find" />
+        <TextView
+            android:id="@+id/tv_savings"
+            android:layout_width="@dimen/dimen_0dp"
+            android:gravity="center"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:textSize="@dimen/dimen_15dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Savings : "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_salary" />
+        <TextView
+            android:id="@+id/tv_noOutput"
+            android:visibility="gone"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_savings"
+            android:text="@string/text_comparison"
+            android:textSize="@dimen/dimen_15dp"
+            android:textStyle="bold"
+            android:fontFamily="casual"
+            android:layout_margin="@dimen/dimen_15dp"
+            android:background="@drawable/rounded_corner_bg"
+            android:padding="@dimen/dimen_15dp"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_output"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_savings"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tv_how_much_for_saving"
+            android:layout_margin="@dimen/dimen_8dp"
+            android:layout_width="@dimen/dimen_0dp"
+            android:gravity="center"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:textSize="@dimen/dimen_15dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/how_much_for_saving"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.github.lzyzsd.circleprogress.ArcProgress
+            android:id="@+id/arc_progress1"
+            android:layout_width="120dp"
+            android:layout_height="@dimen/dimen_0dp"
+            android:layout_margin="@dimen/dimen_8dp"
+            app:arc_unfinished_color="@color/arcDefault"
+            app:arc_finished_color="@color/arcSavingsProgress"
+            app:arc_bottom_text="temperature"
+            app:layout_constraintDimensionRatio="1:1"
+            app:arc_progress="50"
+            app:layout_constraintEnd_toStartOf="@id/guideline1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_how_much_for_saving" />
+
+        <com.github.lzyzsd.circleprogress.ArcProgress
+            android:id="@+id/arc_progress2"
+            android:layout_width="120dp"
+            android:layout_height="@dimen/dimen_0dp"
+            android:layout_margin="@dimen/dimen_8dp"
+            app:arc_unfinished_color="@color/arcDefault"
+            app:arc_finished_color="@color/arcSavingsProgress"
+            app:arc_bottom_text="temperature"
+            app:layout_constraintDimensionRatio="1:1"
+            app:arc_progress="70"
+            app:layout_constraintEnd_toStartOf="@id/guideline2"
+            app:layout_constraintStart_toEndOf="@id/guideline1"
+            app:layout_constraintTop_toBottomOf="@+id/tv_how_much_for_saving" />
+
+        <com.github.lzyzsd.circleprogress.ArcProgress
+            android:id="@+id/arc_progress3"
+            android:layout_width="120dp"
+            android:layout_height="@dimen/dimen_0dp"
+            android:layout_margin="@dimen/dimen_8dp"
+            app:arc_unfinished_color="@color/arcDefault"
+            app:arc_finished_color="@color/arcSavingsProgress"
+            app:arc_bottom_text="temperature"
+            app:layout_constraintDimensionRatio="1:1"
+            app:arc_progress="100"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_how_much_for_saving" />
+
+
+        <TextView
+            android:id="@+id/tv_how_much_for_expense"
+            android:layout_margin="@dimen/dimen_12dp"
+            android:layout_width="@dimen/dimen_0dp"
+            android:gravity="center"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:textSize="@dimen/dimen_15dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/how_much_for_expense"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/arc_progress1" />
+
+        <com.github.lzyzsd.circleprogress.ArcProgress
+            android:id="@+id/arc_expense1"
+            android:layout_width="120dp"
+            android:layout_height="@dimen/dimen_0dp"
+            android:minHeight="117dp"
+            android:layout_margin="@dimen/dimen_8dp"
+            app:arc_unfinished_color="@color/arcDefault"
+            app:arc_finished_color="@color/arcExpenseProgress"
+            app:arc_bottom_text="temperature"
+            app:layout_constraintDimensionRatio="1:1"
+            app:arc_progress="10"
+            app:layout_constraintEnd_toStartOf="@id/guideline1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_how_much_for_expense" />
+
+        <com.github.lzyzsd.circleprogress.ArcProgress
+            android:id="@+id/arc_expense2"
+            android:layout_width="120dp"
+            android:layout_height="@dimen/dimen_0dp"
+            android:layout_margin="@dimen/dimen_8dp"
+            app:arc_unfinished_color="@color/arcDefault"
+            app:arc_finished_color="@color/arcExpenseProgress"
+            app:arc_bottom_text="temperature"
+            app:layout_constraintDimensionRatio="1:1"
+            app:arc_progress="20"
+            app:layout_constraintEnd_toStartOf="@id/guideline2"
+            app:layout_constraintStart_toEndOf="@id/guideline1"
+            app:layout_constraintTop_toBottomOf="@+id/tv_how_much_for_expense" />
+
+        <com.github.lzyzsd.circleprogress.ArcProgress
+            android:id="@+id/arc_expense3"
+            android:layout_width="120dp"
+            android:layout_height="@dimen/dimen_0dp"
+            android:layout_margin="@dimen/dimen_8dp"
+            app:arc_unfinished_color="@color/arcDefault"
+            app:arc_finished_color="@color/arcExpenseProgress"
+            app:arc_bottom_text="temperature"
+            app:layout_constraintDimensionRatio="1:1"
+            app:arc_progress="30"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/tv_how_much_for_expense" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.33"/>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.66"/>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="@dimen/dimen_0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/arc_expense1"
+            android:layout_marginTop="@dimen/dimen_12dp"/>
+
+        <TextView
+            android:id="@+id/tv_comparison"
+            android:layout_margin="@dimen/dimen_12dp"
+            android:layout_width="@dimen/dimen_0dp"
+            android:gravity="center"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:textSize="@dimen/dimen_15dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:text="@string/text_comparison"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/arc_expense1"
+
+            />
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chart"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="300dp"
+            android:layout_margin="@dimen/dimen_12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_comparison"
+            app:layout_constraintBottom_toTopOf="@+id/btn_print"/>
+        <Button
+            android:id="@+id/btn_print"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chart"
+            android:text="@string/text_print"
+            android:textColor="@android:color/white"
+            android:background="@drawable/rounded_alert_negetive"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
